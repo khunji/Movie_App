@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.loader {
+  font-size: 2rem; /*기본 글씨 크기 2배*/
+  width: 100%;
+  height: 100vh; /*화면 전체 높이(Viewport Height)기준이라 항상 브라우저 전체 높이만큼의 공간이 확보된다. 즉, 이제 align-items:center;는 가운데에 배치가능*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300px;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-gap: 100px;
+  padding-top: 70px;
+  width: 70%;
+}
+
+@media screen and (max-width: 767px) {
+  .movies {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+}
